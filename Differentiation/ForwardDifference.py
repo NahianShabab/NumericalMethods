@@ -2,10 +2,10 @@ import plot;
 import numpy as np;
 
 # Find first deriavative of f(x) at X_0
-X_0=16; 
+X_0=np.pi/3; 
 
 def f(x):
-    return (2000*np.log(14*10**4/(14*10**4-2100*x))-9.8*x);
+    return (np.sin(x));
 
 # Forward Difference method to find deriavative of f(x) at X_0
 def findSlope(function,X_0,delX)->float:
@@ -18,7 +18,7 @@ def findConstant(function,X_0,m)->float:
     return c;
 
 #plot the main function
-x1=np.arange(X_0-5,X_0+5.1,0.1);
+x1=np.arange(X_0-5,X_0+5.1,0.00001);
 plot.addPlot(x1,f(x1),Label='f(x)');
 
 #get the values of tangent y=mx+c at X_0
